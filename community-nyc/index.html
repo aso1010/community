@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHEF KENJI SATO // NODE 02 // COMMUNITY.NYC</title>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Chef Kenji Sato",
+    "url": "https://kenji.community.nyc",
+    "servesCuisine": "Japanese Washoku",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "412 Graham Ave, Station 03",
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY",
+      "postalCode": "11211"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      /* Fibonacci Spatial & Typographic Scale (px) */
+      --f-1: 1px;
+      --f-2: 2px;
+      --f-3: 3px;
+      --f-5: 5px;
+      --f-8: 8px;
+      --f-13: 13px;
+      --f-21: 21px;
+      --f-34: 34px;
+      --f-55: 55px;
+      --f-89: 89px;
+      --bg: #FFFFFF;
+      --fg: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+      font-size: var(--f-13);
+      line-height: var(--f-21);
+      padding: var(--f-21);
+      max-width: 987px; /* Fibonacci F16 */
+      margin: 0 auto;
+    }
+
+    header, section, footer {
+      border: var(--f-1) solid var(--fg);
+      margin-bottom: var(--f-21);
+    }
+
+    .bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--f-8) var(--f-13);
+      border-bottom: var(--f-1) solid var(--fg);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .bar:last-child {
+      border-bottom: none;
+    }
+
+    h1 {
+      font-size: var(--f-34);
+      line-height: 1.1;
+      padding: var(--f-21) var(--f-13);
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: var(--f-1) solid var(--fg);
+    }
+
+    .meta-cell {
+      padding: var(--f-13);
+      border-right: var(--f-1) solid var(--fg);
+    }
+
+    .meta-cell:last-child {
+      border-right: none;
+    }
+
+    .label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: var(--f-3);
+    }
+
+    .menu-row {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+      border-bottom: var(--f-1) solid var(--fg);
+    }
+
+    .menu-row:last-child {
+      border-bottom: none;
+    }
+
+    .menu-info, .menu-stock, .menu-action {
+      padding: var(--f-13);
+      border-right: var(--f-1) solid var(--fg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .menu-action {
+      border-right: none;
+      align-items: stretch;
+    }
+
+    .item-title {
+      font-size: var(--f-21);
+      font-weight: 700;
+      margin-bottom: var(--f-5);
+    }
+
+    button {
+      background: var(--fg);
+      color: var(--bg);
+      border: var(--f-1) solid var(--fg);
+      padding: var(--f-13);
+      font-family: inherit;
+      font-size: var(--f-13);
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    button:disabled {
+      background: var(--bg);
+      color: var(--fg);
+      opacity: 0.35;
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
+
+    .ledger {
+      padding: var(--f-13);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    @media (max-width: 610px) { /* Fibonacci F15 */
+      .meta-grid, .menu-row {
+        grid-template-columns: 1fr;
+      }
+      .meta-cell, .menu-info, .menu-stock {
+        border-right: none;
+        border-bottom: var(--f-1) solid var(--fg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="bar">
+      <span>NODE: BK-02 // WILLIAMSBURG</span>
+      <span>STATUS: BATCH 02 ACTIVE</span>
+    </div>
+    <h1>CHEF KENJI SATO</h1>
+    <div class="meta-grid">
+      <div class="meta-cell">
+        <span class="label">Physical Station</span>
+        412 Graham Ave, Window B
+      </div>
+      <div class="meta-cell">
+        <span class="label">Dispatch Window</span>
+        17:30 – 21:00 EST (1.5 MI RADIUS)
+      </div>
+      <div class="meta-cell">
+        <span class="label">Sovereign Settlement</span>
+        100% Direct to Chef // Zero Markup
+      </div>
+    </div>
+  </header>
+
+  <section aria-label="Production Menu">
+    <div class="bar">
+      <span>LIVE PRODUCTION TELEMETRY</span>
+      <span>SYNC: FOOD API V1</span>
+    </div>
+
+    <div class="menu-row" data-sku="kn-cod-01" data-price="24.00">
+      <div class="menu-info">
+        <div class="item-title">Saikyo Miso Black Cod Bento</div>
+        <p>72-hour fermented white miso sablefish, Koshihikari rice, pickled daikon, sesame spinach. [GF]</p>
+      </div>
+      <div class="menu-stock">
+        <span class="label">Portions Left</span>
+        <strong>14 / 40</strong>
+      </div>
+      <div class="menu-action">
+        <button type="button" onclick="reserve('kn-cod-01', 24)">ORDER // $24</button>
+      </div>
+    </div>
+
+    <div class="menu-row" data-sku="kn-sob-02" data-price="18.00">
+      <div class="menu-info">
+        <div class="item-title">Charred Maitake &amp; Dashi Soba</div>
+        <p>100% buckwheat noodles, roasted Hudson Valley maitake, kombu-shiitake broth, scallions. [VG]</p>
+      </div>
+      <div class="menu-stock">
+        <span class="label">Portions Left</span>
+        <strong>22 / 35</strong>
+      </div>
+      <div class="menu-action">
+        <button type="button" onclick="reserve('kn-sob-02', 18)">ORDER // $18</button>
+      </div>
+    </div>
+
+    <div class="menu-row" data-sku="kn-pan-03" data-price="8.00">
+      <div class="menu-info">
+        <div class="item-title">Hojicha Panna Cotta</div>
+        <p>Roasted Uji green tea cream, black sugar kuromitsu reduction, toasted kinako.</p>
+      </div>
+      <div class="menu-stock">
+        <span class="label">Portions Left</span>
+        <strong>0 / 20</strong>
+      </div>
+      <div class="menu-action">
+        <button type="button" disabled>LOCKED // SOLD OUT</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ledger">
+      <span id="cart-state">CART: 0 ITEMS // $0.00</span>
+      <span>INFRASTRUCTURE: <a href="https://community.nyc" style="color:#FFF;">COMMUNITY.NYC</a></span>
+    </div>
+  </footer>
+
+  <script>
+    let count = 0;
+    let total = 0;
+    function reserve(sku, price) {
+      count += 1;
+      total += price;
+      document.getElementById('cart-state').textContent =
+        `CART: ${count} ITEM(S) // $${total.toFixed(2)} + $3.00 ECARGO BATCH (OR $0 PICKUP)`;
+    }
+  </script>
+</body>
+</html>
