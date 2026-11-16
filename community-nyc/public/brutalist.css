@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 62.5% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo-Italic-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 62.5% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Fibonacci Spatial & Typographic Scale (px) */
+  --f-1: 1px;
+  --f-2: 2px;
+  --f-3: 3px;
+  --f-5: 5px;
+  --f-8: 8px;
+  --f-13: 13px;
+  --f-21: 21px;
+  --f-34: 34px;
+  --f-55: 55px;
+  --f-89: 89px;
+  --f-144: 144px;
+  --f-233: 233px;
+  --f-377: 377px;
+  --f-610: 610px;
+  --f-987: 987px;
+  --f-1597: 1597px;
+
+  --bg: #FFFFFF;
+  --fg: #000000;
+  --font-display: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: var(--f-13);
+  line-height: var(--f-21);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: var(--f-21);
+  max-width: var(--f-1597); /* Fibonacci F17 Desktop Command Canvas */
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.frame {
+  border: var(--f-1) solid var(--fg);
+  margin-bottom: var(--f-21);
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--f-8) var(--f-13);
+  border-bottom: var(--f-1) solid var(--fg);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.bar:last-child {
+  border-bottom: none;
+}
+
+.bar-inverted {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.hero-block {
+  display: grid;
+  grid-template-columns: 1.618fr 1fr; /* Golden Ratio Desktop Split */
+  border-bottom: var(--f-1) solid var(--fg);
+}
+
+.hero-title-cell {
+  padding: var(--f-34) var(--f-21);
+  border-right: var(--f-1) solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-spec-cell {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.spec-row {
+  padding: var(--f-13) var(--f-21);
+  border-bottom: var(--f-1) solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 112, "wght" 800;
+  font-size: var(--f-55);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: var(--f-13);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 105, "wght" 700;
+  font-size: var(--f-21);
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+  margin-bottom: var(--f-3);
+}
+
+/* Desktop 2-Column Console Split (Menu Matrix + Live Checkout / Telemetry Sidebar) */
+.desktop-workspace {
+  display: grid;
+  grid-template-columns: 1.618fr 1fr;
+  gap: var(--f-21);
+  align-items: start;
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  border-bottom: var(--f-1) solid var(--fg);
+}
+
+.menu-row:last-child {
+  border-bottom: none;
+}
+
+.menu-info, .menu-stock, .menu-action {
+  padding: var(--f-21);
+  border-right: var(--f-1) solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-action {
+  border-right: none;
+  align-items: stretch;
+}
+
+.item-title {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 105, "wght" 700;
+  font-size: var(--f-21);
+  line-height: 1.2;
+  margin-bottom: var(--f-8);
+}
+
+.sku-tag {
+  display: inline-block;
+  border: var(--f-1) solid var(--fg);
+  padding: 1px var(--f-5);
+  font-size: 11px;
+  margin-top: var(--f-8);
+  width: fit-content;
+}
+
+button, .btn {
+  background: var(--fg);
+  color: var(--bg);
+  border: var(--f-1) solid var(--fg);
+  padding: var(--f-13);
+  font-family: var(--font-mono);
+  font-size: var(--f-13);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+button:hover:not(:disabled), .btn:hover {
+  background: var(--bg);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+button:disabled {
+  background: var(--bg);
+  color: var(--fg);
+  opacity: 0.35;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.toggle-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--f-1) solid var(--fg);
+}
+
+.toggle-btn {
+  background: var(--bg);
+  color: var(--fg);
+  border: none;
+  border-right: var(--f-1) solid var(--fg);
+  padding: var(--f-13);
+}
+
+.toggle-btn:last-child {
+  border-right: none;
+}
+
+.toggle-btn.active {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ledger-table th, .ledger-table td {
+  padding: var(--f-8) var(--f-13);
+  border-bottom: var(--f-1) solid var(--fg);
+  border-right: var(--f-1) solid var(--fg);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ledger-table th:last-child, .ledger-table td:last-child {
+  border-right: none;
+}
+
+.ledger-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ledger-table th {
+  text-transform: uppercase;
+  font-size: 11px;
+  background: var(--bg);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cell {
+  padding: var(--f-21);
+  border-right: var(--f-1) solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-cell:last-child {
+  border-right: none;
+}
+
+.sticky-console {
+  position: sticky;
+  top: var(--f-21);
+}
+
+@media (max-width: 987px) { /* Fibonacci F16 Breakpoint */
+  .hero-block, .desktop-workspace, .grid-4, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .hero-title-cell, .grid-cell {
+    border-right: none;
+    border-bottom: var(--f-1) solid var(--fg);
+  }
+  .sticky-console {
+    position: static;
+  }
+}
+
+@media (max-width: 610px) { /* Fibonacci F15 Breakpoint */
+  .menu-row {
+    grid-template-columns: 1fr;
+  }
+  .menu-info, .menu-stock {
+    border-right: none;
+    border-bottom: var(--f-1) solid var(--fg);
+  }
+}

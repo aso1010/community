@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://community.nyc/#organization",
+      "name": "Community",
+      "url": "https://community.nyc",
+      "description": "Decentralized culinary infrastructure network providing physical commissary nodes and headless Food API execution."
+    },
+    {
+      "@type": [
+        "Person",
+        "FoodEstablishment"
+      ],
+      "@id": "https://kenji.community.nyc/#node",
+      "name": "Chef Kenji Sato",
+      "url": "https://kenji.community.nyc",
+      "servesCuisine": "Japanese Washoku",
+      "parentOrganization": {
+        "@id": "https://community.nyc/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "412 Graham Ave, Station 03",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11211",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7176,
+        "longitude": -73.9447
+      },
+      "hasMenu": {
+        "@id": "https://kenji.community.nyc/#menu"
+      }
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://kenji.community.nyc/#menu",
+      "name": "Daily Batch Production",
+      "inLanguage": "en",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Dinner Service // Window 17:30-21:00",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://kenji.community.nyc/#item-miso-cod",
+              "name": "Saikyo Miso Black Cod Bento",
+              "description": "72-hour fermented white miso sablefish, Koshihikari rice, pickled daikon, sesame spinach.",
+              "suitableForDiet": "https://schema.org/GlutenFreeDiet",
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "680 kcal",
+                "proteinContent": "42g"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "24.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validThrough": "2026-11-16T21:00:00-05:00",
+                "seller": {
+                  "@id": "https://kenji.community.nyc/#node"
+                },
+                "availableDeliveryMethod": [
+                  "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+                  "http://purl.org/goodrelations/v1#DeliveryModePickUp"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

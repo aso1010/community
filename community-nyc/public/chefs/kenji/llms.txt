@@ -1,0 +1,13 @@
+# Chef Kenji Sato (kenji.community.nyc)
+> Sovereign Culinary Node operating out of Community Node 02 (412 Graham Ave, Brooklyn, NY 11211).
+
+## Operational Parameters
+- Status: OPEN (Batch 02 Active)
+- Pickup Window: 17:30 - 21:00 EST (Street Window B)
+- Delivery Zone: 1.5-mile radius (Williamsburg, Greenpoint) // Flat $3.00 courier execution fee
+- Direct Checkout API: `POST https://api.community.nyc/v1/orders/direct`
+
+## Live Menu & Portion Telemetry
+- **Saikyo Miso Black Cod Bento** | $24.00 USD | Remaining: 14/40 portions | Gluten-Free | `sku: kn-cod-01`
+- **Charred Maitake & Dashi Soba** | $18.00 USD | Remaining: 22/35 portions | Vegan | `sku: kn-sob-02`
+- **Hojicha Panna Cotta** | $8.00 USD | Remaining: 0/20 portions | SOLD OUT | `sku: kn-pan-03`

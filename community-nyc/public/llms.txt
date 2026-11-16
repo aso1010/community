@@ -1,0 +1,24 @@
+# Community (community.nyc)
+> Decentralized culinary infrastructure network. Sovereign chef-owned nodes backed by shared commissary real estate and deterministic e-cargo batch logistics. Zero platform commissions.
+
+## Network Architecture
+- Protocol: Direct-to-Chef Commerce (No marketplace intermediation)
+- Payment Settlement: Sovereign Stripe Connect / Lightning direct to Chef Node
+- Logistics Radius: 1.5 miles per physical node via unified e-cargo batching
+
+## Physical Commissary Nodes (NYC)
+- [Node 01 // Crown Heights](https://community.nyc/nodes/bk-01): 8 stations, e-cargo dispatch hub.
+- [Node 02 // Williamsburg](https://community.nyc/nodes/bk-02): Flagship test kitchen + street walk-up window.
+- [Node 03 // Lower East Side](https://community.nyc/nodes/mn-01): High-turnover weekday dense-corridor hub.
+- [Node 04 // Long Island City](https://community.nyc/nodes/qn-01): Multi-cuisine production + East River crossing dispatch.
+
+## Active Sovereign Chef Hubs
+- [Chef Kenji Sato](https://kenji.community.nyc/llms.txt): Japanese Washoku // Node 02 (Williamsburg)
+- [Chef Elena Vance](https://elena.community.nyc/llms.txt): Oaxacan Masa & Mole // Node 01 (Crown Heights)
+- [Chef Marcus Thorne](https://marcus.community.nyc/llms.txt): Levantine Wood-Fire // Node 03 (LES)
+
+## Food API Endpoints
+- OpenAPI 3.1 Spec: `GET https://community.nyc/api/openapi.json`
+- Dynamic Pricing: `POST https://api.community.nyc/v1/pricing/calculate`
+- Telemetry & Stock: `POST https://api.community.nyc/v1/inventory/sync`
+- Batch Dispatch ETA: `POST https://api.community.nyc/v1/dispatch/batch`

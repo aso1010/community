@@ -1,0 +1,10 @@
+name = "community-nyc"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "public"
+
+# Custom Domains (Bind in Cloudflare Dashboard -> Pages -> Custom Domains)
+# - community.nyc
+# - kenji.community.nyc
+# - elena.community.nyc
+# - marcus.community.nyc
+# - api.community.nyc

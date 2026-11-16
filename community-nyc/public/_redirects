@@ -1,0 +1,7 @@
+# Subdomain-to-Path Routing for Cloudflare Pages / Workers
+https://kenji.community.nyc/llms.txt /chefs/kenji/llms.txt 200
+https://kenji.community.nyc/* /chefs/kenji/:splat 200
+https://elena.community.nyc/llms.txt /chefs/elena/llms.txt 200
+https://elena.community.nyc/* /chefs/elena/:splat 200
+https://marcus.community.nyc/llms.txt /chefs/marcus/llms.txt 200
+https://marcus.community.nyc/* /chefs/marcus/:splat 200

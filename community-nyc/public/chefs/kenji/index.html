@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHEF KENJI SATO // NODE BK-02 // COMMUNITY.NYC</title>
+  <link rel="stylesheet" href="/brutalist.css">
+  <link rel="alternate" type="text/plain" href="/chefs/kenji/llms.txt" title="LLM Context">
+  <link rel="alternate" type="application/ld+json" href="/chefs/kenji/schema.jsonld" title="Schema.org Graph">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://community.nyc/#organization",
+        "name": "Community",
+        "url": "https://community.nyc",
+        "description": "Decentralized culinary infrastructure network providing physical commissary nodes and headless Food API execution."
+      },
+      {
+        "@type": ["Person", "FoodEstablishment"],
+        "@id": "https://kenji.community.nyc/#node",
+        "name": "Chef Kenji Sato",
+        "url": "https://kenji.community.nyc",
+        "servesCuisine": "Japanese Washoku",
+        "parentOrganization": {
+          "@id": "https://community.nyc/#organization"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "412 Graham Ave, Station 03",
+          "addressLocality": "Brooklyn",
+          "addressRegion": "NY",
+          "postalCode": "11211",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.7176,
+          "longitude": -73.9447
+        },
+        "hasMenu": {
+          "@id": "https://kenji.community.nyc/#menu"
+        }
+      },
+      {
+        "@type": "Menu",
+        "@id": "https://kenji.community.nyc/#menu",
+        "name": "Daily Batch Production",
+        "inLanguage": "en",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Dinner Service // Window 17:30-21:00",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "@id": "https://kenji.community.nyc/#item-miso-cod",
+                "name": "Saikyo Miso Black Cod Bento",
+                "description": "72-hour fermented white miso sablefish, Koshihikari rice, pickled daikon, sesame spinach.",
+                "suitableForDiet": "https://schema.org/GlutenFreeDiet",
+                "nutrition": {
+                  "@type": "NutritionInformation",
+                  "calories": "680 kcal",
+                  "proteinContent": "42g"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "24.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "validThrough": "2026-11-16T21:00:00-05:00",
+                  "seller": {
+                    "@id": "https://kenji.community.nyc/#node"
+                  },
+                  "availableDeliveryMethod": [
+                    "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+                    "http://purl.org/goodrelations/v1#DeliveryModePickUp"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="frame">
+    <div class="bar bar-inverted">
+      <span><a href="/">COMMUNITY.NYC</a> // NODE: BK-02 (WILLIAMSBURG)</span>
+      <span>STATUS: BATCH 02 ACTIVE // <a href="/chefs/kenji/llms.txt">LLMS.TXT</a> // <a href="/chefs/kenji/schema.jsonld">JSON-LD</a></span>
+    </div>
+    <div class="hero-block">
+      <div class="hero-title-cell">
+        <div>
+          <span class="label">SOVEREIGN CHEF NODE // JAPANESE WASHOKU</span>
+          <h1>CHEF KENJI SATO</h1>
+        </div>
+        <p>Direct-to-chef batch production out of Station 03. Zero marketplace intermediation. Deterministic e-cargo consolidation within a 1.5-mile Williamsburg / Greenpoint radius.</p>
+      </div>
+      <div class="hero-spec-cell">
+        <div class="spec-row">
+          <span class="label">Physical Commissary Station</span>
+          <strong>412 Graham Ave, Station 03 // Street Window B</strong>
+        </div>
+        <div class="spec-row">
+          <span class="label">Dispatch &amp; Pickup Window</span>
+          <strong>17:30 – 21:00 EST (1.5 MI RADIUS)</strong>
+        </div>
+        <div class="spec-row">
+          <span class="label">Settlement Protocol</span>
+          <strong>100% Direct Stripe Connect / Lightning // $0 Markup</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="desktop-workspace">
+    <div>
+      <section class="frame" aria-label="Production Menu">
+        <div class="bar">
+          <span>LIVE PRODUCTION TELEMETRY // DINNER BATCH 02</span>
+          <span>SYNC: FOOD API V1</span>
+        </div>
+
+        <div class="menu-row" data-sku="kn-cod-01" data-price="24.00">
+          <div class="menu-info">
+            <div class="item-title">Saikyo Miso Black Cod Bento</div>
+            <p>72-hour fermented white miso sablefish, Koshihikari rice, pickled daikon, sesame spinach. [GF // 680 KCAL // 42G PROTEIN]</p>
+            <span class="sku-tag">SKU: KN-COD-01</span>
+          </div>
+          <div class="menu-stock">
+            <span class="label">Portions Left</span>
+            <strong id="stock-kn-cod-01">14 / 40</strong>
+          </div>
+          <div class="menu-action">
+            <button type="button" id="btn-kn-cod-01" onclick="reserve('kn-cod-01', 'Saikyo Miso Black Cod Bento', 24)">ORDER // $24</button>
+          </div>
+        </div>
+
+        <div class="menu-row" data-sku="kn-sob-02" data-price="18.00">
+          <div class="menu-info">
+            <div class="item-title">Charred Maitake &amp; Dashi Soba</div>
+            <p>100% buckwheat noodles, roasted Hudson Valley maitake, kombu-shiitake broth, scallions. [VG // 510 KCAL // 19G PROTEIN]</p>
+            <span class="sku-tag">SKU: KN-SOB-02</span>
+          </div>
+          <div class="menu-stock">
+            <span class="label">Portions Left</span>
+            <strong id="stock-kn-sob-02">22 / 35</strong>
+          </div>
+          <div class="menu-action">
+            <button type="button" id="btn-kn-sob-02" onclick="reserve('kn-sob-02', 'Charred Maitake & Dashi Soba', 18)">ORDER // $18</button>
+          </div>
+        </div>
+
+        <div class="menu-row" data-sku="kn-pan-03" data-price="8.00">
+          <div class="menu-info">
+            <div class="item-title">Hojicha Panna Cotta</div>
+            <p>Roasted Uji green tea cream, black sugar kuromitsu reduction, toasted kinako. [290 KCAL]</p>
+            <span class="sku-tag">SKU: KN-PAN-03</span>
+          </div>
+          <div class="menu-stock">
+            <span class="label">Portions Left</span>
+            <strong>0 / 20</strong>
+          </div>
+          <div class="menu-action">
+            <button type="button" disabled>LOCKED // SOLD OUT</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="frame" aria-label="Unit Economics">
+        <div class="bar">
+          <span>CLOSED-LOOP UNIT ECONOMICS // $24.00 MENU ITEM (30-ORDER BATCH)</span>
+          <span>CHEF MARGIN DELTA: +203.6%</span>
+        </div>
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Line Item</th>
+              <th class="num">Legacy App (30%)</th>
+              <th class="num">Community E-Cargo</th>
+              <th class="num">Community Pickup</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gross Diner Outlay</td>
+              <td class="num">$30.50 ($24 + $6.50 fees)</td>
+              <td class="num">$27.00 ($24 + $3.00 flat)</td>
+              <td class="num">$24.00 ($0.00 fee)</td>
+            </tr>
+            <tr>
+              <td>Platform Commission</td>
+              <td class="num">-$7.20</td>
+              <td class="num">$0.00</td>
+              <td class="num">$0.00</td>
+            </tr>
+            <tr>
+              <td>Payment Rail (Stripe) + Food API</td>
+              <td class="num">$0.00 (Bundled)</td>
+              <td class="num">-$2.25 ($1.00 + $1.25)</td>
+              <td class="num">-$2.25 ($1.00 + $1.25)</td>
+            </tr>
+            <tr>
+              <td>COGS ($6.80) + Packaging ($0.95)</td>
+              <td class="num">-$7.75</td>
+              <td class="num">-$7.75</td>
+              <td class="num">-$7.75</td>
+            </tr>
+            <tr>
+              <td>Amortized Station + Paid CAC</td>
+              <td class="num">-$4.90 ($2.50 + $2.40)</td>
+              <td class="num">-$1.40 ($0 CAC)</td>
+              <td class="num">-$1.40 ($0 CAC)</td>
+            </tr>
+            <tr style="font-weight:700;">
+              <td>CHEF NET OPERATING PROFIT</td>
+              <td class="num">$4.15 (17.3%)</td>
+              <td class="num">$12.60 (52.5%)</td>
+              <td class="num">$12.60 (52.5%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <aside class="sticky-console">
+      <section class="frame" aria-label="Direct Order Execution">
+        <div class="bar bar-inverted">
+          <span>DIRECT ORDER LEDGER</span>
+          <span id="order-count">0 ITEMS</span>
+        </div>
+        <div class="toggle-group">
+          <button type="button" id="mode-pickup" class="toggle-btn active" onclick="setMode('PICKUP')">WINDOW PICKUP ($0)</button>
+          <button type="button" id="mode-ecargo" class="toggle-btn" onclick="setMode('ECARGO_BATCH')">E-CARGO BATCH ($3)</button>
+        </div>
+        <div id="cart-items" style="padding: var(--f-13); border-bottom: var(--f-1) solid var(--fg); min-height: var(--f-89);">
+          <span class="label">Queue Empty // Select Batch Portions</span>
+        </div>
+        <div style="padding: var(--f-13); border-bottom: var(--f-1) solid var(--fg);">
+          <div style="display:flex; justify-content:space-between;">
+            <span>SUBTOTAL</span>
+            <strong id="ledger-subtotal">$0.00</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between;">
+            <span>LOGISTICS EXECUTION</span>
+            <strong id="ledger-shipping">$0.00</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-top: var(--f-8); padding-top: var(--f-8); border-top: var(--f-1) solid var(--fg);">
+            <span>TOTAL SETTLEMENT</span>
+            <strong id="ledger-total">$0.00</strong>
+          </div>
+        </div>
+        <div style="padding: var(--f-13);">
+          <button type="button" id="checkout-btn" disabled onclick="executeOrder()">EXECUTE DIRECT ORDER // POST /V1/ORDERS/DIRECT</button>
+          <div id="api-telemetry" style="margin-top: var(--f-8); font-size: 11px;"></div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="frame">
+    <div class="bar bar-inverted">
+      <span>INFRASTRUCTURE: <a href="/">COMMUNITY.NYC</a> // UNIVERSE ENGINE V1</span>
+      <span>EDGE CACHE: CLOUDFLARE CDN // ZERO EXTERNAL DEPENDENCIES</span>
+    </div>
+  </footer>
+
+  <script>
+    const inventory = {
+      'kn-cod-01': { remaining: 14, max: 40, price: 24, name: 'Saikyo Miso Black Cod Bento' },
+      'kn-sob-02': { remaining: 22, max: 35, price: 18, name: 'Charred Maitake & Dashi Soba' }
+    };
+    const cart = {};
+    let mode = 'PICKUP';
+
+    function setMode(nextMode) {
+      mode = nextMode;
+      document.getElementById('mode-pickup').classList.toggle('active', mode === 'PICKUP');
+      document.getElementById('mode-ecargo').classList.toggle('active', mode === 'ECARGO_BATCH');
+      renderLedger();
+    }
+
+    function reserve(sku, name, price) {
+      if (!inventory[sku] || inventory[sku].remaining <= 0) return;
+      inventory[sku].remaining -= 1;
+      cart[sku] = (cart[sku] || 0) + 1;
+
+      document.getElementById(`stock-${sku}`).textContent = `${inventory[sku].remaining} / ${inventory[sku].max}`;
+      if (inventory[sku].remaining === 0) {
+        const btn = document.getElementById(`btn-${sku}`);
+        btn.disabled = true;
+        btn.textContent = 'LOCKED // SOLD OUT';
+      }
+      renderLedger();
+    }
+
+    function renderLedger() {
+      const container = document.getElementById('cart-items');
+      const entries = Object.entries(cart).filter(([, qty]) => qty > 0);
+      let subtotal = 0;
+      let totalItems = 0;
+
+      if (entries.length === 0) {
+        container.innerHTML = '<span class="label">Queue Empty // Select Batch Portions</span>';
+      } else {
+        container.innerHTML = entries.map(([sku, qty]) => {
+          const item = inventory[sku];
+          const line = item.price * qty;
+          subtotal += line;
+          totalItems += qty;
+          return `<div style="display:flex; justify-content:space-between; margin-bottom:var(--f-5);">
+            <span>${qty}x ${item.name}</span>
+            <strong>$${line.toFixed(2)}</strong>
+          </div>`;
+        }).join('');
+      }
+
+      const shipping = (totalItems > 0 && mode === 'ECARGO_BATCH') ? 3.00 : 0.00;
+      const total = subtotal + shipping;
+
+      document.getElementById('order-count').textContent = `${totalItems} ITEM(S)`;
+      document.getElementById('ledger-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('ledger-shipping').textContent = `$${shipping.toFixed(2)}`;
+      document.getElementById('ledger-total').textContent = `$${total.toFixed(2)}`;
+      document.getElementById('checkout-btn').disabled = totalItems === 0;
+    }
+
+    async function executeOrder() {
+      const telemetry = document.getElementById('api-telemetry');
+      telemetry.textContent = 'TRANSMITTING TO EDGE WORKER /v1/orders/direct ...';
+      const payload = {
+        node_id: 'bk-02',
+        chef_id: 'chef_kenji_02',
+        fulfillment_mode: mode,
+        items: cart,
+        idempotency_key: crypto.randomUUID ? crypto.randomUUID() : String(Date.now())
+      };
+      try {
+        const res = await fetch('/v1/orders/direct', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        telemetry.textContent = `CONFIRMED: ${data.order_id} // SETTLEMENT: ${data.settlement_rail} // CDN PURGED: ${data.cdn_surrogate_purged}`;
+      } catch (e) {
+        telemetry.textContent = `LOCAL SIMULATION LOCKED // PAYLOAD READY: ${JSON.stringify(payload)}`;
+      }
+    }
+  </script>
+</body>
+</html>
