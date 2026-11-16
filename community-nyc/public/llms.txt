@@ -22,3 +22,6 @@
 - Dynamic Pricing: `POST https://api.community.nyc/v1/pricing/calculate`
 - Telemetry & Stock: `POST https://api.community.nyc/v1/inventory/sync`
 - Batch Dispatch ETA: `POST https://api.community.nyc/v1/dispatch/batch`
+
+## Implementation status
+This is a demonstration network. Inventory is not persistent; dispatch does not book couriers. No payment settlement or cache purge is performed by these demo handlers. Use the same-origin /api/openapi.json contract; custom API domains require separate configuration.

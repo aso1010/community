@@ -3,18 +3,8 @@
   "info": {
     "title": "Community Food API // Universe Engine",
     "version": "1.0.0",
-    "description": "Headless culinary commerce, dynamic unit economics, station portion telemetry, and e-cargo spatial batch consolidation."
+    "description": "Pricing calculator and demonstration inventory/dispatch handlers. Inventory is not persistent; dispatch does not book couriers."
   },
-  "servers": [
-    {
-      "url": "https://api.community.nyc",
-      "description": "Production Edge Workers Endpoint"
-    },
-    {
-      "url": "/v1",
-      "description": "Relative Pages Functions Endpoint"
-    }
-  ],
   "paths": {
     "/v1/pricing/calculate": {
       "post": {
@@ -110,6 +100,12 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Malformed JSON"
+          },
+          "422": {
+            "description": "Invalid request fields"
           }
         }
       }
@@ -187,6 +183,12 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Malformed JSON"
+          },
+          "422": {
+            "description": "Invalid request fields"
           }
         }
       }
@@ -277,9 +279,21 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Malformed JSON"
+          },
+          "422": {
+            "description": "Invalid request fields"
           }
         }
       }
     }
-  }
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Same-origin Pages API"
+    }
+  ]
 }

@@ -18,7 +18,8 @@ export async function onRequestPost(context) {
     sku,
     remaining_portions: remaining,
     state,
-    cdn_surrogate_purged: true
+    cdn_surrogate_purged: false,
+    simulation: true
   }), {
     headers: {
       "Content-Type": "application/json",

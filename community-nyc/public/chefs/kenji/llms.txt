@@ -11,3 +11,6 @@
 - **Saikyo Miso Black Cod Bento** | $24.00 USD | Remaining: 14/40 portions | Gluten-Free | `sku: kn-cod-01`
 - **Charred Maitake & Dashi Soba** | $18.00 USD | Remaining: 22/35 portions | Vegan | `sku: kn-sob-02`
 - **Hojicha Panna Cotta** | $8.00 USD | Remaining: 0/20 portions | SOLD OUT | `sku: kn-pan-03`
+
+## Implementation status
+This is a demonstration network. Inventory is not persistent; dispatch does not book couriers. No payment settlement or cache purge is performed by these demo handlers. Use the same-origin /api/openapi.json contract; custom API domains require separate configuration.

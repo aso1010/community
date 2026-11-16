@@ -5,10 +5,11 @@ export async function onRequestPost(context) {
 
   return new Response(JSON.stringify({
     batch_id: `batch_${(body.node_id || "bk02").replace("-", "")}_1830`,
-    courier_id: "ecargo_09",
-    consolidated_orders_count: orders.length || 4,
-    route_sequence: routeSequence.length ? routeSequence : ["ord_101", "ord_104", "ord_107", "ord_112"],
-    total_route_miles: 2.4
+    courier_id: "demo_ecargo_09",
+    simulation: true,
+    consolidated_orders_count: orders.length,
+    route_sequence: routeSequence,
+    total_route_miles: orders.length ? 2.4 : 0
   }), {
     headers: {
       "Content-Type": "application/json",

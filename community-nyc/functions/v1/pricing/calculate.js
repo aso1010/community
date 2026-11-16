@@ -1,9 +1,9 @@
 export async function onRequestPost(context) {
   const body = await context.request.json();
-  const cogs = Number(body.cogs_usd || 6.80);
-  const packaging = Number(body.packaging_usd || 0.95);
-  const station = Number(body.station_amortized_usd || 1.40);
-  const targetMargin = Number(body.target_net_margin || 0.525);
+  const cogs = Number(body.cogs_usd ?? 6.80);
+  const packaging = Number(body.packaging_usd ?? 0.95);
+  const station = Number(body.station_amortized_usd ?? 1.40);
+  const targetMargin = Number(body.target_net_margin ?? 0.525);
   const mode = body.fulfillment_mode || "PICKUP";
 
   const apiFee = 1.25;
